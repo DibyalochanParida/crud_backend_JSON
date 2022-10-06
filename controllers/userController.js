@@ -28,7 +28,7 @@ export const getUsers = async (req, res, next)=> {
         existUser.data.find((e) => e.id == req.params.id).status = req.body.status;
       }
       saveUsersData(existUser);
-      res.send(`user with id ${req.body.id} has been updated`);
+      res.send(existUser);
     } catch (error) {
       return next(error);
     }
@@ -46,7 +46,7 @@ export const addUser = (req, res, next) => {
         status:null,
       });
       saveUsersData(existUser);
-      res.send({ success: true, msg: "user added successfully" });
+      res.send(existUser);
     } catch (error) {
       return next(error);
     }
@@ -59,7 +59,7 @@ export const deleteUser = (req, res, next) => {
       return item.id != req.params.id;
     });
     saveUsersData(existUser);
-    res.send(`employees with id ${req.params.id} has been deleted`);
+    res.send(existUser);
   } catch (error) {
     return next(error);
   }
