@@ -1,4 +1,4 @@
-import { saveUsersData, getUsersData } from "../services/usersServices.js";
+import { saveUsersData, getUsersData } from "../services/user/usersServices.js";
 import { v4 as UID } from "uuid";
 
 

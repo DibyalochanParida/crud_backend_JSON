@@ -1,4 +1,4 @@
-import {getUsers,updateUser,addUser,deleteUser} from "../controllers/userController.js";
+import {getUsers,updateUser,addUser,deleteUser} from "../../controllers/userController.js";
 
 export default function(router){
 
